@@ -60,4 +60,6 @@ function run() {
   for(var i = 0, l = jobs.length; i < l; ++i) {
     jobs[i]()
   }
+
+  return !!this.jobs.length
 }

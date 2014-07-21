@@ -38,4 +38,7 @@ if all is set to true, ready will be called even if the queue was not empty. use
 queue a function to be called next time the batch is run. the function is called without a context, use fn.bind if you need a specific context to be set
 
 ### batch.add(fn) -> fn
-works like a debaunce. batch.add will return a new function, when this function is called it will queue the original function to be called with the passed arguments and context.  calling this function multiple times will result in the function only running once when the batch executes with the last set of arguments passed. 
+works like a debaunce. batch.add will return a new function, when this function is called it will queue the original function to be called with the passed arguments and context.  calling this function multiple times will result in the function only running once when the batch executes with the last set of arguments passed.
+
+### batch.run() -> boolean
+runs any queued jobs, returns `true` if any jobs were run, otherwise returns `false`
