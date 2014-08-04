@@ -61,5 +61,5 @@ function run() {
     jobs[i]()
   }
 
-  return !!this.jobs.length
+  return !!jobs.length
 }
